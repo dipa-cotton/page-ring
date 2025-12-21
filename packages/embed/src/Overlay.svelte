@@ -92,12 +92,13 @@
             ]}
           >
             <button
-              onclick={() => (open = !open)}
-              ondblclick={() => {
-                //  open changes from false -> true -> *false*
-                if (!open && !showDirectory) {
-                  open = true;
-                  showDirectory = true;
+              onclick={(ev) => {
+                if (ev.detail === 2 && open) {
+                  if (!showDirectory) {
+                    showDirectory = true;
+                  }
+                } else {
+                  open = !open;
                 }
               }}
               class={[
