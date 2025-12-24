@@ -6,7 +6,8 @@
       "outputs": ["dist", "build"]
     },
     "website#build": {
-      "dependsOn": ["embed#build"]
+      "dependsOn": ["embed#build"],
+      "outputs": ["dist", ".vercel"]
     },
     "dev": {
       "persistent": true,
