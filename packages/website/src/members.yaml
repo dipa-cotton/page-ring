@@ -59,3 +59,8 @@
   name: "coding corner"
   url: "https://codingcorner.dev"
   buttonUrl: "https://codingcorner.dev/buttons/codingcorner.png"
+
+- id: foxy
+  name: "foxy"
+  url: "https://page.wiffles.xyz"
+  buttonUrl: "https://page.wiffles.xyz/button.gif"
