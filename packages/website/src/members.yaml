@@ -84,3 +84,8 @@
   name: "miniaturity"
   url: "https://minipa.ws/"
   buttonUrl: "https://minipa.ws/images/mini.png"
+
+- id: touhouengie
+  name: "Touhou Engie"
+  url: "https://www.touhouengie.com/"
+  buttonUrl: "https://fileserver.touhouengie.com/drive/webpage_data/Images/rin8831.png"
