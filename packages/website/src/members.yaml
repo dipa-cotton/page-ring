@@ -78,7 +78,7 @@
 - id: acash
   name: "aakash"
   url: "https://acashsite.vercel.app/"
-  buttonUrl: "https://hc-cdn.hel1.your-objectstorage.com/s/v3/65adbc4ef9c268d6_button.png"
+  buttonUrl: "/acash_button.gif"
 
 - id: maverick
   name: "maverick"
