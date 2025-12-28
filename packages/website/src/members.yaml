@@ -78,7 +78,7 @@
 - id: acash
   name: "aakash"
   url: "https://acashsite.vercel.app/"
-  buttonUrl: "/acash_button.gif"
+  buttonUrl: /buttons/acash_button.gif
 
 - id: maverick
   name: "maverick"
