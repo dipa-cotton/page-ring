@@ -63,6 +63,7 @@
   <div class={["flex", lightDark("text-black", "text-white")]}>
     <a
       href={embed.prev.url}
+      title={`prev: ${embed.prev.name}`}
       class={[
         "grid size-7 place-items-center transition hover:ring-1",
         lightDark(
@@ -78,6 +79,7 @@
     </a>
     <button
       onclick={handleClick}
+      title="enter webring"
       class={[
         "group flex h-7 items-center gap-1.5 px-2 font-sans text-sm tracking-normal transition hover:ring-1",
         lightDark(
@@ -91,6 +93,7 @@
     </button>
     <a
       href={embed.next.url}
+      title={`next: ${embed.next.name}`}
       class={[
         "grid size-7 place-items-center transition hover:ring-1",
         lightDark(

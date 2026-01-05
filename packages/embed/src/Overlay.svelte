@@ -103,6 +103,7 @@
                   open = !open;
                 }
               }}
+              title={open ? "hide" : "show"}
               class={[
                 "group grid size-8 origin-top-left place-items-center transition hover:bg-neutral-200",
                 !open && "-translate-x-1 -translate-y-1",
@@ -119,29 +120,30 @@
             >
               <a
                 href={embed.prev.url}
+                title={`prev: ${embed.prev.name}`}
                 class="group grid size-8 place-items-center transition hover:bg-neutral-200"
               >
                 <ArrowLeftIcon
                   strokeWidth={2.5}
                   class="size-4 transition not-group-hover:text-neutral-600"
                 />
-                <span class="sr-only">Previous website</span>
               </a>
               <p class="min-w-0 flex-1 text-center">
                 <strong>page</strong> by Hack Club
               </p>
               <a
                 href={embed.next.url}
+                title={`next: ${embed.next.name}`}
                 class="group grid size-8 place-items-center transition hover:bg-neutral-200"
               >
                 <ArrowRightIcon
                   strokeWidth={2.5}
                   class="size-4 transition not-group-hover:text-neutral-600"
                 />
-                <span class="sr-only">Next website</span>
               </a>
               <button
                 onclick={() => (showDirectory = !showDirectory)}
+                title={showDirectory ? "hide directory" : "show directory"}
                 class="group grid size-8 place-items-center transition hover:bg-neutral-200"
               >
                 <ListIcon
