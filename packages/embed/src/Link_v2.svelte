@@ -6,6 +6,7 @@
   import { flower } from "./lib/consts";
   import { ArrowLeftIcon, ArrowRightIcon } from "@lucide/svelte";
   import { onMount } from "svelte";
+  import { getEmbedCached } from "./lib/api";
 
   // https://stackoverflow.com/a/79718503/22946386
   const container = $host();
@@ -58,50 +59,52 @@
   }
 </script>
 
-<div class="flex">
-  <button
-    class={[
-      "grid size-7 place-items-center transition hover:ring-1",
-      lightDark(
-        "text-black ring-black/20 hover:bg-black/5",
-        "text-white ring-white/20 hover:bg-white/10",
-      ),
-    ]}
-  >
-    <ArrowLeftIcon
-      strokeWidth={2.5}
-      class="size-4 transition-transform group-hover:translate-x-px"
-    />
-  </button>
-  <button
-    part="link"
-    onclick={handleClick}
-    class={[
-      "group flex h-7 items-center gap-1.5 px-2 font-sans text-sm tracking-normal transition hover:ring-1",
-      lightDark(
-        "text-black ring-black/20 hover:bg-black/5",
-        "text-white ring-white/20 hover:bg-white/10",
-      ),
-    ]}
-  >
-    <img part="logo" src={flower} alt="" class="size-5" />
-    <span class="font-bold">page ring</span>
-  </button>
-  <button
-    class={[
-      "grid size-7 place-items-center transition hover:ring-1",
-      lightDark(
-        "text-black ring-black/20 hover:bg-black/5",
-        "text-white ring-white/20 hover:bg-white/10",
-      ),
-    ]}
-  >
-    <ArrowRightIcon
-      strokeWidth={2.5}
-      class="size-4 transition-transform group-hover:translate-x-px"
-    />
-  </button>
-</div>
+{#await getEmbedCached() then embed}
+  <div class="flex">
+    <button
+      class={[
+        "grid size-7 place-items-center transition hover:ring-1",
+        lightDark(
+          "text-black ring-black/20 hover:bg-black/5",
+          "text-white ring-white/20 hover:bg-white/10",
+        ),
+      ]}
+    >
+      <ArrowLeftIcon
+        strokeWidth={2.5}
+        class="size-4 transition-transform group-hover:translate-x-px"
+      />
+    </button>
+    <button
+      part="link"
+      onclick={handleClick}
+      class={[
+        "group flex h-7 items-center gap-1.5 px-2 font-sans text-sm tracking-normal transition hover:ring-1",
+        lightDark(
+          "text-black ring-black/20 hover:bg-black/5",
+          "text-white ring-white/20 hover:bg-white/10",
+        ),
+      ]}
+    >
+      <img part="logo" src={flower} alt="" class="size-5" />
+      <span class="font-bold">page ring</span>
+    </button>
+    <button
+      class={[
+        "grid size-7 place-items-center transition hover:ring-1",
+        lightDark(
+          "text-black ring-black/20 hover:bg-black/5",
+          "text-white ring-white/20 hover:bg-white/10",
+        ),
+      ]}
+    >
+      <ArrowRightIcon
+        strokeWidth={2.5}
+        class="size-4 transition-transform group-hover:translate-x-px"
+      />
+    </button>
+  </div>
+{/await}
 
 <style>
   :host {

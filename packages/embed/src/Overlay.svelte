@@ -15,7 +15,7 @@
   import { cubicOut } from "svelte/easing";
   import { RING_BASE } from "./lib/consts";
   import { onMount } from "svelte";
-  import { getEmbed, getStatus, setStatus } from "./lib/api";
+  import { getEmbedCached, getStatus, setStatus } from "./lib/api";
   import Arrow from "./lib/Arrow.svelte";
 
   // https://stackoverflow.com/a/79718503/22946386
@@ -62,7 +62,7 @@
   }
 </script>
 
-{#await getEmbed() then embed}
+{#await getEmbedCached() then embed}
   {#if embed && enabled}
     {#if open && showDirectory}
       <div

@@ -1,5 +1,6 @@
 import { joinURL } from "ufo";
 import { API_BASE } from "./consts";
+import { cache } from "./cache";
 
 export interface Member {
   id: string;
@@ -36,6 +37,7 @@ export async function getEmbed() {
   console.debug("[pagering] embed data:", data);
   return data;
 }
+export const getEmbedCached = cache("embed", getEmbed);
 
 export async function getStatus() {
   if (location.host === new URL(API_BASE).host) {
