@@ -1,4 +1,4 @@
-<svelte:options customElement="pagering-link" />
+<svelte:options customElement="pagering-link-v2" />
 
 <script lang="ts">
   import styles from "./styles/index.css?inline";
