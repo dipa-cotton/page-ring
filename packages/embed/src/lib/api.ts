@@ -6,6 +6,7 @@ export interface Member {
   id: string;
   name: string;
   url: string;
+  redirectUrl: string;
   buttonUrl: string;
 }
 

@@ -62,7 +62,7 @@
 {#await getEmbedCached() then embed}
   <div class={["flex", lightDark("text-black", "text-white")]}>
     <a
-      href={embed.prev.url}
+      href={embed.prev.redirectUrl}
       title={`prev: ${embed.prev.name}`}
       class={[
         "grid size-7 place-items-center transition hover:ring-1",
@@ -92,7 +92,7 @@
       <span class="font-bold">page ring</span>
     </button>
     <a
-      href={embed.next.url}
+      href={embed.next.redirectUrl}
       title={`next: ${embed.next.name}`}
       class={[
         "grid size-7 place-items-center transition hover:ring-1",
