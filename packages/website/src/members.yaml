@@ -138,3 +138,13 @@
 #   name: "angel"
 #   url: "https://angle-mad.github.io/personal-website/index.html"
 #   buttonUrl: "https://angle-mad.github.io/personal-website/Angel-button.png"
+
+- id: bomberfish
+  name: "bomberfish"
+  url: "https://bomberfish.ca"
+  buttonUrl: "https://bomberfish.ca/button.gif"
+
+- id: mart
+  name: "mart"
+  url: "https://m4rt.nl"
+  buttonUrl: /buttons/mart.png
